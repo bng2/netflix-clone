@@ -22,8 +22,6 @@ export const Banner = () => {
     fetchData();
   }, []);
 
-  console.log(movie);
-
   // ellipses function, truncate movie description
   const truncateDescription = (string, end) => {
     return string?.length > end ? string.substring(0, end - 1) + "..." : string;
