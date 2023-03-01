@@ -1,7 +1,6 @@
 <h1 align="center">
   <img title="Netflix" src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png" alt="NETFLIX Logo" width="600" />
-  <br>
-  Netflix ReactJS Clone
+  <br>Netflix ReactJS Clone
 </h1>
 
 <p><font size="3">
