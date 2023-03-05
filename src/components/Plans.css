@@ -9,6 +9,11 @@
   opacity: 1;
 }
 
+.plans__plan--disabled > button {
+  background-color: grey !important;
+  cursor: default;
+}
+
 .plans__subscribe {
   padding: 10px 20px;
   font-size: 1rem;

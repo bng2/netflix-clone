@@ -17,8 +17,6 @@ export const Row = (props) => {
     fetchData();
   }, [props.fetchUrl]);
 
-  console.log(movies);
-
   return (
     <div className="row">
       <h2>{props.title}</h2>
