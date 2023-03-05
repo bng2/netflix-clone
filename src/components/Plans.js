@@ -81,7 +81,7 @@ export const Plans = () => {
       if (sessionId) {
         // Only init Stripe when we have a valid session
         const stripe = await loadStripe(
-          "pk_test_51Mi4XuIEeVK4D7X7k2GDoREISsigBApQLMFv9QCtem6aJzFvE9htmemnqGiT0YzNQEvOEpSDrJvFAB0F0JClX3ND00aBe5Wm72"
+          `${process.env.REACT_APP_STRIPE_TEST_KEY}`
         );
         stripe.redirectToCheckout({ sessionId });
       }

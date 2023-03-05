@@ -10,6 +10,7 @@ export const SignInPage = () => {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
 
+  // Register the new user
   const register = (e) => {
     e.preventDefault();
 
@@ -18,14 +19,13 @@ export const SignInPage = () => {
       emailRef.current.value,
       passwordRef.current.value
     )
-      .then(() => {
-        console.log(auth.currentUser);
-      })
+      .then(() => {})
       .catch((error) => {
         alert(error.message);
       });
   };
 
+  // Sign in the user
   const signIn = (e) => {
     e.preventDefault();
 
@@ -34,9 +34,7 @@ export const SignInPage = () => {
       emailRef.current.value,
       passwordRef.current.value
     )
-      .then(() => {
-        console.log(auth.currentUser);
-      })
+      .then(() => {})
       .catch((error) => {
         alert(error.message);
       });

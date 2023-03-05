@@ -7,9 +7,9 @@ export const Banner = () => {
   const [movie, setMovie] = useState([]);
 
   useEffect(() => {
-    async function fetchData() {
+    const fetchData = async () => {
       const request = await axios.get(requests.fetchNetflixOriginals);
-      // Randomly select a Netflix original
+      // Randomly display a Netflix original
       setMovie(
         request.data.results[
           Math.floor(Math.random() * request.data.results.length - 1)
@@ -17,14 +17,16 @@ export const Banner = () => {
       );
 
       return request;
-    }
+    };
 
     fetchData();
   }, []);
 
   // ellipses function, truncate movie description
-  const truncateDescription = (string, end) => {
-    return string?.length > end ? string.substring(0, end - 1) + "..." : string;
+  const truncateDescription = (description, maxDescLength) => {
+    return description?.length > maxDescLength
+      ? description.substring(0, maxDescLength - 1) + "..."
+      : description;
   };
 
   return (
@@ -40,10 +42,12 @@ export const Banner = () => {
         <h1 className="banner__title">
           {movie?.title || movie?.name || movie?.original_name}
         </h1>
+
         <div className="banner__buttons">
           <button className="banner__playbutton">&#9654; Play</button>
           <button className="banner__infobutton">&#x1F6C8; More Info</button>
         </div>
+
         <h1 className="banner__description">
           {truncateDescription(movie?.overview, 150)}
         </h1>

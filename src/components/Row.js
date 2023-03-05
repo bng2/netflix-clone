@@ -7,12 +7,13 @@ export const Row = (props) => {
 
   const base_url = "https://image.tmdb.org/t/p/original/";
 
+  // Asynchronously fetch the movies
   useEffect(() => {
-    async function fetchData() {
+    const fetchData = async () => {
       const request = await axios.get(props.fetchUrl);
       setMovies(request.data.results);
       return request;
-    }
+    };
 
     fetchData();
   }, [props.fetchUrl]);

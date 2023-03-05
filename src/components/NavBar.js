@@ -6,8 +6,9 @@ export const NavBar = () => {
   const navigate = useNavigate();
   const [showNav, setShowNav] = useState(false);
 
+  // Trick to fading in NavBar
   const transitionNavBar = () => {
-    if (window.scrollY > 100) {
+    if (window.scrollY > 150) {
       setShowNav(true);
     } else {
       setShowNav(false);

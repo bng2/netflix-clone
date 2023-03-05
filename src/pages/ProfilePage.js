@@ -24,6 +24,7 @@ export const ProfilePage = () => {
             <div className="profilePage__plans">
               <h3>Plans</h3>
               <Plans />
+
               <button
                 className="profilePage__signOut"
                 onClick={() => auth.signOut()}

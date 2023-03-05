@@ -1,7 +1,6 @@
 import { Banner } from "../components/Banner";
 import { NavBar } from "../components/NavBar";
 import { Row } from "../components/Row";
-import "./HomePage.css";
 import requests from "../functions/Requests";
 
 /*

@@ -35,6 +35,7 @@ function App() {
     return unsubscribe;
   }, [dispatch]);
 
+  // Display the login page if the user is not signed in
   return (
     <div className="app">
       <Router>
